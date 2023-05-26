@@ -1,17 +1,12 @@
-import axios from 'axios'
 import {useCallback, useEffect, useState} from 'react'
+import axios from 'axios'
 import Swal from 'sweetalert2'
 import Product from '../components/Product'
 import Loading from '../components/Loading'
 
-const useProducts = () => {
+const Products = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
-
-  const addProduct = (product) => {
-    setProducts([...products, product])
-  }
-
   const loadProducts = useCallback(async () => {
     try {
       setLoading(true)
@@ -34,13 +29,6 @@ const useProducts = () => {
     loadProducts()
   }, [loadProducts])
 
-  return {products, loading, addProduct}
-}
-
-
-const Products = () => {
-  const {products, loading} = useProducts()
-
   return (
     <>
       {loading && <Loading />}
@@ -52,6 +40,5 @@ const Products = () => {
     </>
   )
 }
-
 
 export default Products
