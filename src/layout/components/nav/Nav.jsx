@@ -5,8 +5,19 @@ import links from './links'
 
 const Nav = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
-  const toggleMenu = () => setMenuIsOpen(!menuIsOpen)
-  window.addEventListener('resize', () => setMenuIsOpen(false))
+  const toggleMenu = () => {
+    setMenuIsOpen(!menuIsOpen)
+    if (!menuIsOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+  }
+  
+  window.addEventListener('resize', () => {
+    setMenuIsOpen(false)
+    document.body.style.overflow = ''
+  })
 
   return (
     <nav>

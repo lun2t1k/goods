@@ -5,12 +5,14 @@
   gap: 1rem
 
 .product
+  position: relative
   flex: 1 0 calc(25% - 1rem)
   display: flex
   flex-direction: column
   justify-content: space-between
   gap: 1rem
   border: 1px solid $black
+  border-radius: 20px
   padding: 1rem
   @media (max-width: $tablet)
     flex: 1 0 calc(50% - 1rem)
@@ -68,3 +70,21 @@
     & svg
       width: 20px
       height: 20px
+
+  &-like
+    position: absolute
+    top: 1rem
+    right: 1rem
+    width: 40px
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    border: none
+    border-radius: 100%
+    background-color: rgba(255, 255, 255, 0.6)
+    backdrop-filter: blur(5px)
+    padding: 0
+    svg
+      width: 24px
+      height: 24px
