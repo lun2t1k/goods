@@ -1,22 +1,21 @@
+import {useState} from 'react'
 import {NavLink} from 'react-router-dom'
-import cl from './Navigation.module.css'
 import cn from 'classnames'
 import links from './links'
-import {useState} from 'react'
 
-const Navigation = () => {
+const Nav = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   const toggleMenu = () => setMenuIsOpen(!menuIsOpen)
   window.addEventListener('resize', () => setMenuIsOpen(false))
 
   return (
     <nav>
-      <button className={cl.navMenu} onClick={toggleMenu}>
+      <button className='nav-menu' onClick={toggleMenu}>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           fill='currentColor'
-          className={cn(cl.navMenuOpen, menuIsOpen && cl.navMenuOpenHidden)}
+          className={cn('nav-menu__open', menuIsOpen && 'nav-menu__open--hidden')}
         >
           <path
             fillRule='evenodd'
@@ -28,7 +27,7 @@ const Navigation = () => {
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           fill='currentColor'
-          className={cn(cl.navMenuClose, menuIsOpen && cl.navMenuCloseActive)}
+          className={cn('nav-menu__close', menuIsOpen && 'nav-menu__close--active')}
         >
           <path
             fillRule='evenodd'
@@ -38,10 +37,10 @@ const Navigation = () => {
         </svg>
       </button>
 
-      <ul className={cn(cl.navList, menuIsOpen && cl.navListOpened)}>
+      <ul className={cn('nav-list', menuIsOpen && 'nav-list--opened')}>
         {links.map(link => (
           <li key={link.label}>
-            <NavLink to={link.url} className={cl.navLink} onClick={toggleMenu}>
+            <NavLink to={link.url} className='nav-link' onClick={toggleMenu}>
               {link.label}
             </NavLink>
           </li>
@@ -51,4 +50,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default Nav

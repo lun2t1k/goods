@@ -1,26 +1,25 @@
-import cl from './Product.module.css'
 import cn from 'classnames'
 
 const Product = ({product}) => {
   return (
-    <div key={`${product.id}`} id={`${product.id}`} className={cl.product}>
+    <div key={`${product.id}`} id={`${product.id}`} className='product'>
       <div>
-        <a href='/' className={cl.productImage}>
+        <a href='/' className='product-image'>
           <img src={product.image} alt={product.title} />
         </a>
 
-        <div className={cl.productDescription}>
-          <div className={cl.productPrice}>{product.price}$</div>
+        <div className='product-description'>
+          <div className='product-price'>${product.price}</div>
 
-          <a href='/' className={cl.productTitle}>
+          <a href='/' className='product-title'>
             {product.title}
           </a>
 
-          <div className={cl.productRating}>
+          <div className='product-rating'>
             <div
-              className={cn(cl.productRate, {
-                [cl.productRateGood]: product.rating.rate > 4 || false,
-                [cl.productRateBad]: product.rating.rate < 3 || false,
+              className={cn('product-rate', {
+                'product-rate--good': product.rating.rate > 4 || false,
+                'product-rate--bad': product.rating.rate < 3 || false,
               })}
             >
               <svg
@@ -34,10 +33,10 @@ const Product = ({product}) => {
                   clipRule='evenodd'
                 />
               </svg>
-              <span>{product.rating?.rate || '--'}</span>
+              <span>{product.rating.rate || '--'}</span>
             </div>
 
-            <div className={cl.productReviews}>
+            <div className='product-reviews'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'
@@ -49,7 +48,7 @@ const Product = ({product}) => {
                   clipRule='evenodd'
                 />
               </svg>
-              <span>{product.rating?.count || '---'}</span>
+              <span>{product.rating.count || '---'}</span>
             </div>
           </div>
         </div>

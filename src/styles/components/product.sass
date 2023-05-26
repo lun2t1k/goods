@@ -1,0 +1,70 @@
+.products
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  gap: 1rem
+
+.product
+  flex: 1 0 calc(25% - 1rem)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 1rem
+  border: 1px solid $black
+  padding: 1rem
+  @media (max-width: $tablet)
+    flex: 1 0 calc(50% - 1rem)
+  @media (max-width: $mobile)
+    flex: 1 0 100%
+
+  &-image
+    width: 100%
+    height: 300px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 1.5rem
+    & img
+      object-fit: contain
+
+  &-description
+    display: flex
+    flex-direction: column
+    gap: 0.4rem
+
+  &-price
+    font-weight: 600
+    font-size: 1.25rem
+
+  &-title
+    display: inline-block
+    font-size: 1.5rem
+    line-height: 1.2
+    word-break: break-word
+    &:hover
+      text-decoration: none
+
+  &-rating
+    display: flex
+    align-items: center
+    gap: 0.5rem
+
+  &-rate
+    display: flex
+    align-items: center
+    gap: 0.2rem
+    &--good svg
+      fill: $green
+    &--bad svg
+      fill: $red
+    & svg
+      width: 20px
+      height: 20px
+
+  &-reviews
+    display: flex
+    align-items: center
+    gap: 0.2rem
+    & svg
+      width: 20px
+      height: 20px

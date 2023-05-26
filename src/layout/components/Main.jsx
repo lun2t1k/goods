@@ -1,5 +1,5 @@
 const Main = ({children}) => (
-  <main>
+  <main className='main'>
     <div className='container'>
       {children}
     </div>
