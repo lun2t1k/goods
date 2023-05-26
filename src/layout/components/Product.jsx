@@ -1,18 +1,6 @@
 import cn from 'classnames'
-import {useEffect} from 'react'
 
 const Product = ({product}) => {
-  useEffect(() => {
-    
-  }, [])
-
-
-  const handleLike = id => {
-    let likedProducts = [1, 2, 4]
-    likedProducts.push(id)
-    localStorage.setItem('likedProducts', JSON.stringify(likedProducts))
-  }
-
   return (
     <div key={`${product.id}`} id={`${product.id}`} className='product'>
       <div>
@@ -70,7 +58,7 @@ const Product = ({product}) => {
         <button>Add to cart</button>
       </div>
 
-      <button className='product-like' onClick={() => handleLike(product.id)}>
+      <button className='product-like'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'

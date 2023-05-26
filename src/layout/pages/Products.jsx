@@ -5,6 +5,10 @@ import Product from '../components/Product'
 import Loading from '../components/Loading'
 
 const Products = () => {
+  useEffect(() => {
+    document.title = 'GOODS | Products'
+  }, [])
+
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
   const loadProducts = useCallback(async () => {

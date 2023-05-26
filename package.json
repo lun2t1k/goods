@@ -2,7 +2,12 @@
   "name": "goods",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lun2t1k.github.io/goods",
+  "homepage": "https://lun2t1k.github.io/goods/#/home",
+  "author": "Dmitry Krutkin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lun2t1k/goods"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
