@@ -1,6 +1,6 @@
-import {NavLink} from 'react-router-dom'
-import Nav from './nav/Nav'
 import {useEffect} from 'react'
+import {NavLink} from 'react-router-dom'
+import NavBar from './navbar/NavBar'
 
 const Header = () => {
   useEffect(() => {
@@ -36,7 +36,7 @@ const Header = () => {
           <NavLink to='/' className='header-logo'>
             <h1>GOODS</h1>
           </NavLink>
-          <Nav />
+          <NavBar />
         </div>
       </div>
     </header>

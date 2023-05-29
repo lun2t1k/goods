@@ -1,28 +1,26 @@
 import {HashRouter, Route, Routes} from 'react-router-dom'
-import Header from './layout/components/Header'
-import Main from './layout/components/Main'
-import Home from './layout/pages/Home'
-import Products from './layout/pages/Products'
-import About from './layout/pages/About'
-import ContactUs from './layout/pages/ContactUs'
-import Dashboard from './layout/pages/Dashboard'
+import {Provider} from 'react-redux'
+import routes from './routes'
+import store from './redux/store'
+import Header from './views/components/Header'
+import Main from './views/components/Main'
 
 // ! HashRouter is used for GitHub page
 // ! Use BrowserRouter with basename={process.env.PUBLIC_URL} instead of it
 
 const App = () => (
-  <HashRouter>
-    <Header />
-    <Main>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact-us' element={<ContactUs />} />
-        <Route path='/dashboard' element={<Dashboard />} />
-      </Routes>
-    </Main>
-  </HashRouter>
+  <Provider store={store}>
+    <HashRouter>
+      <Header />
+      <Main>
+        <Routes>
+          {routes.map(route => (
+            <Route key={route.path} path={route.path} element={route.component} />
+          ))}
+        </Routes>
+      </Main>
+    </HashRouter>
+  </Provider>
 )
 
 export default App
