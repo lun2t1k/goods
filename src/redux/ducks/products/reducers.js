@@ -1,8 +1,9 @@
 import {createReducer} from '@reduxjs/toolkit'
-import {setProducts} from './actions'
+import {setProducts, setIsLoading} from './actions'
 
 const initialFriendsState = {
-  products: []
+  products: [],
+  isLoading: false
 }
 
 const productsReducer = createReducer(initialFriendsState, builder => {
@@ -11,6 +12,12 @@ const productsReducer = createReducer(initialFriendsState, builder => {
       return {
         ...state,
         products: action.payload.products
+      }
+    })
+    .addCase(setIsLoading, (state = initialFriendsState, action) => {
+      return {
+        ...state,
+        isLoading: action.payload.boolean
       }
     })
     .addDefaultCase((state = initialFriendsState) => {

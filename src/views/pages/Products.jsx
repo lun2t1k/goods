@@ -2,9 +2,9 @@ import {useEffect} from 'react'
 import {connect} from 'react-redux'
 import {loadProducts} from '../../redux/ducks/products'
 import Product from '../components/Product'
-// import Loading from '../components/Loading'
+import Loading from '../components/Loading'
 
-const Products = ({loadProducts, products}) => {
+const Products = ({loadProducts, isLoading, products}) => {
   useEffect(() => {
     document.title = 'GOODS | Products'
   }, [])
@@ -15,7 +15,7 @@ const Products = ({loadProducts, products}) => {
 
   return (
     <>
-      {/* {loading && <Loading />} */}
+      {isLoading && <Loading />}
       <div className='products'>
         {products.map(product => (
           <Product key={`${product.id}`} product={product} />
@@ -27,7 +27,8 @@ const Products = ({loadProducts, products}) => {
 
 const mapStateToProps = state => {
   return {
-    products: state.products.products
+    products: state.products.products,
+    isLoading: state.products.isLoading
   }
 }
 

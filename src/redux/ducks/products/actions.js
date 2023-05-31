@@ -6,3 +6,9 @@ export const setProducts = createAction(types.SET_PRODUCTS, function prepare(pro
     payload: {products}
   }
 })
+
+export const setIsLoading = createAction(types.SET_IS_LOADING, function prepare(boolean) {
+  return {
+    payload: {boolean}
+  }
+})

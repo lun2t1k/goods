@@ -25,7 +25,7 @@ const App = () => (
       </Main>
       <Footer />
       <MobileNavBar />
-      <ToastContainer limit={3} />
+      <ToastContainer limit={2} />
     </HashRouter>
   </Provider>
 )
