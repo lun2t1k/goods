@@ -21,16 +21,16 @@ const NavBar = () => {
   })
 
   return (
-    <nav>
-      <button className='nav-menu' onClick={toggleMenu}>
+    <nav className='navbar'>
+      <button className='navbar-menu' onClick={toggleMenu}>
         <MenuIcon menuIsOpen={menuIsOpen} />
         <CloseIcon menuIsOpen={menuIsOpen} />
       </button>
 
-      <ul className={cn('nav-list', menuIsOpen && 'nav-list--opened')}>
+      <ul className={cn('navbar-list', menuIsOpen && 'navbar-list--opened')}>
         {links.map(link => (
           <li key={link.label}>
-            <NavLink to={link.url} className='nav-link' onClick={toggleMenu}>
+            <NavLink to={link.url} className='navbar-link' onClick={toggleMenu}>
               {link.label}
             </NavLink>
           </li>

@@ -1,6 +1,7 @@
 import {toast, Slide} from 'react-toastify'
 
-export const toastSuccess = (text, position) => {
+export const toastSuccess = text => {
+  toast.clearWaitingQueue()
   toast.success(text, {
     transition: Slide,
     theme: 'light',
