@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import routes from './routes'
 import store from './redux/store'
 import Header from './views/components/Header'
+import Footer from './views/components/Footer'
 import Main from './views/components/Main'
 import MobileNavBar from './views/components/mobileNavbar/MobileNavBar'
 
@@ -22,6 +23,7 @@ const App = () => (
           ))}
         </Routes>
       </Main>
+      <Footer />
       <MobileNavBar />
       <ToastContainer limit={3} />
     </HashRouter>
