@@ -1,0 +1,74 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "prettier"
+    ],
+    "overrides": [],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "no-unused-vars": [
+            "warn",
+            {
+                "caughtErrors": "none"
+            }
+        ],
+        // "object-curly-spacing": [
+        //     "warn",
+        //     "always",
+        //     {
+        //         "arraysInObjects": true,
+        //         "objectsInObjects": true
+        //     }
+        // ],
+        // "array-bracket-spacing": [
+        //     "warn",
+        //     "always",
+        //     {
+        //         "singleValue": true,
+        //         "objectsInArrays": true,
+        //         "arraysInArrays": true
+        //     }
+        // ],
+        // "react/jsx-curly-spacing": [
+        //     "warn",
+        //     {
+        //         "when": "always",
+        //         "children": true
+        //     }
+        // ],
+        "react/jsx-uses-react": "warn",
+        "react/jsx-uses-vars": "warn",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/display-name": [
+            "off",
+            {
+                "ignoreTranspilerName": true,
+                "checkContextObjects": true
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
