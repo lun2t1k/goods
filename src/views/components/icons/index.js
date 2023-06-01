@@ -7,5 +7,14 @@ import ProfileIcon from './ProfileIcon'
 import CartIcon from './CartIcon'
 import CatalogIcon from './CatalogIcon'
 import HomeIcon from './HomeIcon'
+import UserCardIcon from './UserCardIcon'
+import ContactUsIcon from './ContactUsIcon'
+import LogoutIcon from './LogoutIcon'
+import OctagonInfoIcon from './OctagonInfoIcon'
+import WavyInfoIcon from './WavyInfoIcon'
+import ShieldInfoIcon from './ShieldInfoIcon'
+import SettingsIcon from './SettingsIcon'
+import FolderIcon from './FolderIcon'
 
-export {StarIcon, CommentIcon, HeartIcon, MenuIcon, CloseIcon, HomeIcon, CatalogIcon, CartIcon, ProfileIcon}
+export {StarIcon, CommentIcon, HeartIcon, MenuIcon, CloseIcon, HomeIcon, CatalogIcon, CartIcon, ProfileIcon, UserCardIcon, 
+  ContactUsIcon, LogoutIcon, OctagonInfoIcon, WavyInfoIcon, ShieldInfoIcon, SettingsIcon, FolderIcon}

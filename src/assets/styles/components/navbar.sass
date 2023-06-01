@@ -4,6 +4,7 @@ nav
 .navbar
   @media (max-width: $mobile)
     display: none
+
   &-list
     display: flex
     gap: 1rem
@@ -46,19 +47,16 @@ nav
     svg
       width: 32px
       height: 32px
-      transition: all 0.5s ease
+      transition: all 0.2s ease
 
     &__open
       position: relative
-      opacity: 1
+      transform: scale(1)
       &--hidden
-        opacity: 0
-        transform: translateX(-100%)
+        transform: scale(0)
 
     &__close
       position: absolute
-      opacity: 0
-      transform: translateX(100%)
+      transform: scale(0)
       &--active
-        opacity: 1
-        transform: translateX(0)
+        transform: scale(1)

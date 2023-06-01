@@ -1,6 +1,7 @@
 import {useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
 import NavBar from './navbar/NavBar'
+import Notifications from './notifications/Notifications'
 
 const Header = () => {
   useEffect(() => {
@@ -36,7 +37,10 @@ const Header = () => {
           <NavLink to='/' className='header-logo'>
             <h1>GOODS</h1>
           </NavLink>
-          <NavBar />
+          <div className='header-actions'>
+            <NavBar />
+            <Notifications />
+          </div>
         </div>
       </div>
     </header>

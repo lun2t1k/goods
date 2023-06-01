@@ -4,13 +4,13 @@ const Footer = () => (
       <div className="footer-wrap">
         <ul>
           <li>
-            <a href="#/">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
           </li>
           <li>
-            <a href="#/">Cookies Policy</a>
+            <a href="/cookies-policy">Cookies Policy</a>
           </li>
           <li>
-            <a href="#/">Term of Use</a>
+            <a href="/term-of-use">Term of Use</a>
           </li>
         </ul>
         <p className='rights'>

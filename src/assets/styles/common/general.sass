@@ -16,6 +16,7 @@ a
   color: $black
   text-decoration: none
   transition: all 0.2s ease
+  -webkit-tap-highlight-color: transparent
   &:hover
     text-decoration: underline
     text-underline-offset: 4px
@@ -27,6 +28,7 @@ button
   padding: 0.5rem 0.75em
   transition: all 0.2s ease-in
   cursor: pointer
+  -webkit-tap-highlight-color: transparent
   @media (max-width: $mobile)
     width: 100%
   &:hover
@@ -47,3 +49,8 @@ img
   padding: 64px 0
   @media (max-width: $mobile)
     padding: 64px 0 110px
+
+.notifications
+  svg
+    width: 20px
+    height: 20px

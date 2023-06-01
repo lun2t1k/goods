@@ -3,7 +3,8 @@
   top: 0
   left: 0
   width: 100%
-  background-color: $white
+  background-color: rgba(255, 255, 255, 0.9)
+  backdrop-filter: blur(10px)
   z-index: 1
   transition: all 0.3s ease
 
@@ -23,3 +24,12 @@
       margin: 0
     &:hover
       text-decoration: none
+
+  &-actions
+    display: flex
+    align-items: center
+    gap: 24px
+    @media (max-width: $tablet)
+      flex-direction: row-reverse
+    .notifications
+      height: 20px

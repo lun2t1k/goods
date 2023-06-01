@@ -4,7 +4,7 @@ const links = [
     url: '/'
   },
   {
-    label: 'Products',
+    label: 'Catalog',
     url: '/products'
   },
   {

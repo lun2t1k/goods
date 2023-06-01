@@ -4,6 +4,7 @@ import Products from '../views/pages/Products'
 import About from '../views/pages/About'
 import ContactUs from '../views/pages/ContactUs'
 import Dashboard from '../views/pages/Dashboard'
+import Profile from '../views/pages/Profile'
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
   {
     path: '/dashboard',
     component: <Dashboard />
+  },
+  {
+    path: '/profile',
+    component: <Profile />
   }
 ]
 
