@@ -5,9 +5,7 @@ const ContactUs = () => {
     document.title = 'GOODS | Contact Us'
   }, [])
 
-  return (
-    <div>ContactUs</div>
-  )
+  return <div>ContactUs</div>
 }
 
 export default ContactUs

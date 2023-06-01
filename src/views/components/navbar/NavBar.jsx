@@ -16,7 +16,7 @@ const NavBar = () => {
       }
     }
   }
-  
+
   window.addEventListener('resize', () => {
     setMenuIsOpen(false)
     document.body.style.overflow = ''

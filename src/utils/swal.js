@@ -6,6 +6,6 @@ export const swalError = error => {
     text: error,
     icon: 'error',
     buttonsStyling: false,
-    confirmButtonText: 'Ok',
+    confirmButtonText: 'Ok'
   })
 }

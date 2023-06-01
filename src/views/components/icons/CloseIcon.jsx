@@ -5,7 +5,10 @@ const CloseIcon = ({menuIsOpen}) => (
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
     fill='currentColor'
-    className={cn('navbar-menu__close', menuIsOpen && 'navbar-menu__close--active')}
+    className={cn(
+      'navbar-menu__close',
+      menuIsOpen && 'navbar-menu__close--active'
+    )}
   >
     <path
       fillRule='evenodd'

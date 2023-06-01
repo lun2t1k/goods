@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom'
-import {DefaultBellIcon, NotifyBellIcon, DisabledBellIcon} from './BellIcon'
+import {DefaultBellIcon} from './BellIcon'
 
 const Notifications = () => {
   return (

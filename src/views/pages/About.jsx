@@ -5,9 +5,7 @@ const About = () => {
     document.title = 'GOODS | About'
   }, [])
 
-  return (
-    <div>About</div>
-  )
+  return <div>About</div>
 }
 
 export default About

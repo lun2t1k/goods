@@ -5,9 +5,7 @@ const Dashboard = () => {
     document.title = 'GOODS | Dashboard'
   }, [])
 
-  return (
-    <div>Dashboard</div>
-  )
+  return <div>Dashboard</div>
 }
 
 export default Dashboard

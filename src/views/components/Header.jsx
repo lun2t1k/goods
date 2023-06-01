@@ -16,11 +16,17 @@ const Header = () => {
         return
       }
 
-      if (currentScroll > lastScroll && !header.classList.contains('header--hidden')) {
+      if (
+        currentScroll > lastScroll &&
+        !header.classList.contains('header--hidden')
+      ) {
         // Hide header when scrolling down
         header.classList.remove('header--shown')
         header.classList.add('header--hidden')
-      } else if (currentScroll < lastScroll && header.classList.contains('header--hidden')) {
+      } else if (
+        currentScroll < lastScroll &&
+        header.classList.contains('header--hidden')
+      ) {
         // Show header when scrolling up
         header.classList.remove('header--hidden')
         header.classList.add('header--shown')
@@ -46,6 +52,5 @@ const Header = () => {
     </header>
   )
 }
-
 
 export default Header

@@ -6,7 +6,10 @@ const MobileNavBar = () => (
     <ul>
       {links.map(link => (
         <li key={link.label}>
-          <NavLink to={link.url} className={({isActive}) => isActive ? 'active-page' : ''}>
+          <NavLink
+            to={link.url}
+            className={({isActive}) => (isActive ? 'active-page' : '')}
+          >
             {link.icon}
             <span>{link.label}</span>
           </NavLink>

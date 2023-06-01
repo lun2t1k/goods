@@ -5,7 +5,10 @@ const MenuIcon = ({menuIsOpen}) => (
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
     fill='currentColor'
-    className={cn('navbar-menu__open', menuIsOpen && 'navbar-menu__open--hidden')}
+    className={cn(
+      'navbar-menu__open',
+      menuIsOpen && 'navbar-menu__open--hidden'
+    )}
   >
     <path
       fillRule='evenodd'

@@ -14,7 +14,7 @@ const Product = ({product}) => {
 
   const handleLike = id => {
     likedProductsStorage = JSON.parse(localStorage.getItem('likedProducts'))
-    
+
     if (likedProductsStorage.includes(id)) {
       likedProducts = likedProductsStorage.filter(i => i !== id)
       toastSuccess('Product removed from favorites.')
@@ -51,7 +51,7 @@ const Product = ({product}) => {
             <div
               className={cn('product-rate', {
                 'product-rate--good': product.rating.rate > 4 || false,
-                'product-rate--bad': product.rating.rate < 3 || false,
+                'product-rate--bad': product.rating.rate < 3 || false
               })}
             >
               <StarIcon />
@@ -70,9 +70,12 @@ const Product = ({product}) => {
         <button>Add to cart</button>
       </div>
 
-      <button className={cn('product-like', {
-        'product-like--liked': likedItem()
-      })} onClick={() => handleLike(product.id)}>
+      <button
+        className={cn('product-like', {
+          'product-like--liked': likedItem()
+        })}
+        onClick={() => handleLike(product.id)}
+      >
         <HeartIcon />
       </button>
     </div>
